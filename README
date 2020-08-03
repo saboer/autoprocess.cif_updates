@@ -1,0 +1,2 @@
+This code is an edit of the cif.py code in the MX-auto-dataset pipeline, and will write a series of autoprocess.cif files (for XDS and sadabs) using the cif template. 
+In the MX-auto-dataset pipeline currenlty the template is called cx_template.cif. 
