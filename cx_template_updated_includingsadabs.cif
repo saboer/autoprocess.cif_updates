@@ -1,0 +1,35 @@
+{% if temperature and temperature != None %}
+_cell_measurement_temperature     {{ temperature }} (2)
+{% endif %}
+_cell_measurement_reflns_used     {{ index }}
+_cell_measurement_theta_min       '{{ theta_min }}'
+_cell_measurement_theta_max       '{{ theta_max }}' 
+
+_exptl_crystal_description        '{{ description }}'
+_exptl_crystal_colour             '{{ colour }}'
+_exptl_crystal_size_max           '{{ size_max }}'
+_exptl_crystal_size_mid           '{{ size_mid }}'
+_exptl_crystal_size_min           '{{ size_min }}'
+
+_exptl_absorpt_correction_type    'Multi-Scan'
+_exptl_absorpt_correction_T_min   '{{ Tmin }}'
+_exptl_absorpt_correction_T_max   '{{ Tmax }}'
+_exptl_absorpt_process_details    '{{ abs }}'
+
+{% if temperature and temperature != None %}
+_diffrn_ambient_temperature       {{ temperature }} (2)
+{% endif %}
+_diffrn_radiation_wavelength      {{ wavelength }}
+_diffrn_radiation_type            Synchrotron
+_diffrn_radiation_source          '{{ beamline }}'
+{% if crystal %}
+_diffrn_radiation_monochromator   '{{ crystal }}'
+{% endif %}
+_diffrn_measurement_device_type   '{{ detector }}'
+_diffrn_measurement_method        'Omega Scan'
+_diffrn_detector_area_resol_mean  13.3
+
+_computing_data_collection        'AS QEGUI'
+_computing_cell_refinement        'XDS (Kabsch, 2010)'
+_computing_data_reduction         'XDS (Kabsch, 2010)'
+
